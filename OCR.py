@@ -15,7 +15,7 @@ class OCR:
         for i in range(len(results)):
             word = results[i][1]
             words.append(word)
-            transcription += word + " / "
+            transcription += " \n => " + word
         with open('outputs/file.txt', 'r+', encoding='utf-8')as myfile:
             myfile.seek(0, os.SEEK_END)
             myfile.write("\n--------------- New CIN ------------------\n")
