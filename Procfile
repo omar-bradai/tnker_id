@@ -1,0 +1,1 @@
+web: uvicorn app:app --host 172.0.1.107 --port 5000

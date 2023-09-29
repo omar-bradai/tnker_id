@@ -1,10 +1,6 @@
-import socket
-from PIL import Image
 import cv2
 import numpy as np
-import requests
 from OCR import OCR
-import gradio as gr
 import os
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
@@ -97,10 +93,10 @@ def upload_image():
         return jsonify({'url': url})
 
 
-if __name__ == '__main__':
-    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-    # getting the hostname by socket.gethostname() method
-    hostname = socket.gethostname()
-    # getting the IP address using socket.gethostbyname() method
-    ip_address = socket.gethostbyname(hostname)
-    app.run(debug=True, host="172.0.1.107", port=5000)
+# if __name__ == '__main__':
+#     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+#     # getting the hostname by socket.gethostname() method
+#     hostname = socket.gethostname()
+#     # getting the IP address using socket.gethostbyname() method
+#     ip_address = socket.gethostbyname(hostname)
+#     app.run(debug=True, host="172.0.1.107", port=5000)

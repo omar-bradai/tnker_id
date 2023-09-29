@@ -1,11 +1,8 @@
 ArabicOcr==1.1.6
-ArabicOcr==1.1.6
 Flask==2.3.3
-gradio==3.45.1
 matplotlib==3.7.1
 numpy==1.24.3
-opencv_python==4.7.0.72
+opencv_python==4.8.1.78
 opencv_python_headless==4.8.0.76
-Requests==2.31.0
 scikit-image ==0.21.0
 Werkzeug==2.3.7
