@@ -93,7 +93,7 @@ def upload_image():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # Replace with your server's URL
-        url = f'http://172.18.184.107:5000/uploads/{filename}'
+        url = f'http://172.0.1.107:5000/uploads/{filename}'
         return jsonify({'url': url})
 
 
@@ -103,4 +103,4 @@ if __name__ == '__main__':
     hostname = socket.gethostname()
     # getting the IP address using socket.gethostbyname() method
     ip_address = socket.gethostbyname(hostname)
-    app.run(debug=True, host=ip_address, port=5000)
+    app.run(debug=True, host="172.0.1.107", port=5000)
