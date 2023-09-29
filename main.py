@@ -8,6 +8,7 @@ import gradio as gr
 import os
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
+
 app = Flask(__name__)
 
 
@@ -41,17 +42,18 @@ def process_image(image_path):
     number = image[int(rows//3.5): int(rows//2.2), cols//4:  int(cols//1.2)]
     cv2.imwrite('outputs/number.jpg', number)
 
+#   ####### ----------------------------- Not used ------------------------------#########
     # processing
-
     ret, thresh1 = cv2.threshold(names, 140, 255, cv2.THRESH_BINARY)
     # Create the sharpening kernel
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
-
     # Sharpen the image
     sharpened_image = cv2.filter2D(names_1, -1, kernel)
     cv2.imwrite('outputs/sharpened_names.jpg', sharpened_image)
     sharpened_number = cv2.filter2D(number, -1, kernel)
     cv2.imwrite('outputs/sharpened_umber.jpg', sharpened_number)
+
+#   ####### ----------------------------- Not used ------------------------------#########
 
     OCR_image = OCR()
     OCR_image.image = 'outputs/name_1_infos.jpg'
