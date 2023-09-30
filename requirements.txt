@@ -6,3 +6,4 @@ opencv_python==4.8.1.78
 opencv_python_headless==4.8.0.76
 scikit-image ==0.21.0
 Werkzeug==2.3.7
+uvicorn
